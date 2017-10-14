@@ -1,0 +1,88 @@
+<!--Layout for the bindex view -->
+
+<!--Page Header-->
+<div class="container">
+  <h1>Quiz:  {{quiz.topic}}</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="/quizzes/{{quiz.id}}/submit" method="POST">
+        {{#each problems}}
+          <div class="form-group">
+            <label for="{{this.id}}">Question: </label>
+            <img src="{{this.question}}" alt="Question">
+            <p>{{this.choices}}</p>
+            <select style="height:40px;" name="{{this.id}}" id="{{this.id}}" class="form-control custom-select">
+  <option selected>Select your answer:</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+</select>
+    <br><br><br>
+          </div>
+        {{/each}}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div>
+      <br>
+      <a class="btn btn-info" href="/lessons/{{quiz.LessonId}}">Go Back to the Lesson</a> </div>
+    </div
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<!--
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Subject: {{quiz.subject}}</h3>
+      <h3>Topic: {{quiz.topic}}</h3> 
+      
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+      
+      {{#each problems}}
+           <strong> <hr></strong>
+           <img src="{{this.question}}" alt="Question">
+           <p><br>
+           {{this.choices}}</p>
+           <br>
+           <select name="prob-{{this.id}}" id="prob-{{this.id}}" class=" custom-select">
+  <option selected>Select your answer:</option>
+  <option value="A">A</option>
+  <option value="B">B</option>
+  <option value="C">C</option>
+  <option value="D">D</option>
+</select>
+  <br><br><br>
+  <hr>
+        {{/each}}
+
+    </div>
+
+    <div class="col-md-12">
+      
+     <a class="btn btn-info" href="/lessons/{{quiz.LessonId}}">Go Back to the Lesson</a>   
+        <btn type="submit" class="btn btn-warning" >Submit Quiz!</btn> 
+        
+    </div>
+
+  </div>
+</div>
+
+-->
+
+
+

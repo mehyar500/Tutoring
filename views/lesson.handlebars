@@ -1,0 +1,38 @@
+<!--Layout for the bindex view -->
+
+<!--Page Header-->
+<div class="container">
+  <h1>Lesson</h1>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Subject: {{lesson.subject}}</h3>
+      <h3>Topic: {{lesson.topic}}</h3> 
+      
+    </div>
+    <div class="col-md-12">
+      <img src="{{lesson.content}}" alt="Lesson">
+      
+
+    </div>
+    <div class="col-md-12">
+      {{#each quizzes}}
+          <p>
+           <a class="btn btn-warning" href="/quizzes/{{this.id}}">Quiz: {{this.topic}}</a>  </p> 
+        {{/each}}
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+

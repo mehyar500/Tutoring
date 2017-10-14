@@ -1,0 +1,34 @@
+<!--Layout for the bindex view -->
+
+<!--Page Header-->
+<div class="container">
+  <h1>Quizzes</h1>
+</div>
+
+
+
+
+
+<div class="banner-sign container">
+  <div class="row">
+    <div class="col-md-12">
+    <br>
+      <ul>
+        {{#each quizzes}}
+            <li>
+            <a class="btn btn-warning"href="/quizzes/{{this.id}}">		 
+            {{this.subject}}
+            {{this.topic}}</a>
+            </li>   
+            <br>
+        {{/each}}
+      </ul>
+    </div>
+    
+
+  </div>
+</div>
+
+
+
+

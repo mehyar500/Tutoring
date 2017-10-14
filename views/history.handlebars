@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<hr><hr>
+			{{#each problems}}
+			<hr>
+			
+			<div class="panel panel-warning">
+			<p>Timestamp: {{this.createdAt}}</p>
+			<p>Question:</p>
+			<img src="{{this.question}}" alt="Question">
+			<p>Correct: {{this.correct}}</p>
+			
+			</div><hr>
+			{{/each}}
+			
+			<hr><hr>
+		</div>
+	</div>
+</div>
